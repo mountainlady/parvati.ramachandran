@@ -1,141 +1,1209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parvati Ramachandran — Product Director & AI Strategist</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --indigo-900: #1e1b4b; --indigo-800: #312e81; --indigo-600: #4338ca;
-            --indigo-400: #818cf8; --indigo-100: #e0e7ff; --indigo-50: #eef2ff;
-            --blue-500: #3b82f6; --blue-50: #eff6ff; --slate-800: #1e293b;
-            --slate-600: #475569; --slate-500: #64748b; --slate-50: #f8fafc;
-            --white: #ffffff;
-        }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Outfit', sans-serif; background: var(--slate-50); color: var(--slate-800); line-height: 1.7; }
-        nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); border-bottom: 1px solid var(--indigo-100); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--indigo-800); }
-        .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--slate-600); font-size: 0.85rem; transition: 0.2s; }
-        .nav-links a:hover { color: var(--indigo-600); }
-        section { padding: 6rem 2rem; }
-        .container { max-width: 1100px; margin: 0 auto; }
-        .section-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--indigo-600); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-        .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--indigo-900); margin-bottom: 1.5rem; }
-        .hero { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(160deg, var(--indigo-50) 0%, var(--white) 100%); }
-        .hero-inner { display: grid; grid-template-columns: 1fr 350px; gap: 4rem; align-items: center; }
-        .btn-primary { background: var(--indigo-600); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 500; display: inline-block; }
-        .hero-card { background: white; padding: 2rem; border-radius: 24px; border: 1px solid var(--indigo-100); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .timeline { border-left: 2px solid var(--indigo-100); padding-left: 2rem; }
-        .tl-item { margin-bottom: 3rem; position: relative; }
-        .tl-item::before { content: ''; position: absolute; left: calc(-2rem - 6px); top: 0.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--indigo-600); }
-        .tl-date { font-size: 0.8rem; color: var(--slate-500); }
-        .tl-role { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--indigo-900); font-weight: 600; }
-        .badge-box { background: var(--indigo-50); border-left: 4px solid var(--indigo-600); padding: 1rem; margin-top: 1rem; font-size: 0.9rem; }
-        .ai-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .ai-card { background: white; border: 1px solid var(--indigo-100); border-radius: 16px; padding: 1.5rem; transition: 0.3s; text-decoration: none; color: inherit; display: block; }
-        .ai-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .skill-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .skill-pill { background: var(--white); border: 1px solid var(--indigo-100); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: var(--indigo-800); }
-        .skill-pill.hl { background: var(--indigo-600); color: white; border-color: var(--indigo-600); }
-        footer { background: var(--indigo-900); color: white; text-align: center; padding: 2rem; font-size: 0.8rem; }
-        @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } .hero-card { display: none; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parvati Ramachandran — Product Director & AI Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --indigo-900: #1e1b4b;
+    --indigo-800: #312e81;
+    --indigo-700: #3730a3;
+    --indigo-600: #4338ca;
+    --indigo-500: #6366f1;
+    --indigo-400: #818cf8;
+    --indigo-300: #a5b4fc;
+    --indigo-200: #c7d2fe;
+    --indigo-100: #e0e7ff;
+    --indigo-50:  #eef2ff;
+    --blue-700: #1d4ed8;
+    --blue-500: #3b82f6;
+    --blue-400: #60a5fa;
+    --blue-300: #93c5fd;
+    --blue-200: #bfdbfe;
+    --blue-100: #dbeafe;
+    --blue-50:  #eff6ff;
+    --slate-900: #0f172a;
+    --slate-800: #1e293b;
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-400: #94a3b8;
+    --slate-200: #e2e8f0;
+    --slate-100: #f1f5f9;
+    --slate-50:  #f8fafc;
+    --white: #ffffff;
+    --accent: var(--indigo-600);
+    --accent-light: var(--indigo-100);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--slate-50);
+    color: var(--slate-800);
+    line-height: 1.7;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--indigo-100);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 600;
+    color: var(--indigo-800);
+    letter-spacing: 0.01em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 13px; font-weight: 400;
+    color: var(--slate-600);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.03em;
+  }
+  .nav-links a:hover { color: var(--indigo-600); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, var(--indigo-50) 0%, var(--blue-50) 40%, var(--white) 80%);
+  }
+  .hero-bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .orb-1 { width: 600px; height: 600px; background: var(--indigo-200); top: -100px; right: -200px; }
+  .orb-2 { width: 400px; height: 400px; background: var(--blue-200); bottom: -100px; left: -100px; }
+
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 340px;
+    gap: 4rem; align-items: center;
+    position: relative; z-index: 1;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--indigo-600);
+    background: var(--indigo-50); border: 1px solid var(--indigo-200);
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 1.5rem;
+  }
+  .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--indigo-500); }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 600; line-height: 1.1;
+    color: var(--indigo-900);
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--indigo-600); }
+
+  .hero-subtitle {
+    font-size: 16px; color: var(--slate-600); font-weight: 300;
+    margin-bottom: 1.5rem; line-height: 1.8;
+    max-width: 560px;
+  }
+  .hero-subtitle strong { font-weight: 500; color: var(--slate-700); }
+
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 2rem; }
+
+  .btn-primary {
+    background: var(--indigo-600); color: white;
+    padding: 12px 28px; border-radius: 8px;
+    font-size: 14px; font-weight: 500; font-family: 'Outfit', sans-serif;
+    border: none; cursor: pointer; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--indigo-700); transform: translateY(-1px); }
+
+  .btn-ghost {
+    background: white; color: var(--indigo-600);
+    padding: 12px 28px; border-radius: 8px;
+    font-size: 14px; font-weight: 500; font-family: 'Outfit', sans-serif;
+    border: 1.5px solid var(--indigo-300); cursor: pointer; text-decoration: none;
+    transition: all 0.2s; display: inline-block;
+  }
+  .btn-ghost:hover { background: var(--indigo-50); transform: translateY(-1px); }
+
+  /* Hero card */
+  .hero-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid var(--indigo-100);
+    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.12);
+  }
+  .avatar {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--indigo-400), var(--blue-500));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 600; color: white;
+    margin-bottom: 1rem;
+  }
+  .hero-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600; color: var(--indigo-900);
+    margin-bottom: 4px;
+  }
+  .hero-card-role { font-size: 13px; color: var(--slate-500); margin-bottom: 1.25rem; }
+  .hero-card-divider { height: 1px; background: var(--indigo-100); margin-bottom: 1.25rem; }
+
+  .stat-mini-row { display: flex; flex-direction: column; gap: 10px; }
+  .stat-mini {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 13px;
+  }
+  .stat-mini-label { color: var(--slate-500); }
+  .stat-mini-val { font-weight: 500; color: var(--indigo-700); }
+
+  .open-badge {
+    margin-top: 1.25rem;
+    display: flex; align-items: center; gap: 6px;
+    font-size: 12px; color: #166534;
+    background: #dcfce7; padding: 6px 12px;
+    border-radius: 20px; border: 1px solid #bbf7d0;
+    width: fit-content;
+  }
+  .open-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 6rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--indigo-500);
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 600; color: var(--indigo-900);
+    line-height: 1.2; margin-bottom: 1rem;
+  }
+  .section-intro {
+    font-size: 15px; color: var(--slate-500);
+    max-width: 560px; line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  /* ── STATS BAND ── */
+  .stats-band {
+    background: var(--indigo-900);
+    padding: 3.5rem 2rem;
+  }
+  .stats-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .stat-item { text-align: center; }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-weight: 600;
+    color: var(--indigo-300);
+    display: block; line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-desc { font-size: 13px; color: var(--indigo-300); opacity: 0.7; }
+
+  /* ── EXPERIENCE ── */
+  .experience { background: white; }
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-item {
+    display: grid; grid-template-columns: 180px 1fr;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--indigo-50);
+    position: relative;
+  }
+  .tl-item:last-child { border-bottom: none; }
+  .tl-left { padding-top: 4px; }
+  .tl-date { font-size: 12px; color: var(--slate-400); margin-bottom: 6px; }
+  .tl-co {
+    font-size: 13px; font-weight: 500; color: var(--indigo-600);
+    letter-spacing: 0.03em;
+  }
+  .tl-loc { font-size: 12px; color: var(--slate-400); margin-top: 2px; }
+  .tl-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600;
+    color: var(--indigo-900); margin-bottom: 8px; line-height: 1.2;
+  }
+  .tl-desc { font-size: 14px; color: var(--slate-600); line-height: 1.8; }
+  .tl-tag {
+    display: inline-block; font-size: 11px;
+    background: var(--indigo-50); color: var(--indigo-600);
+    border: 1px solid var(--indigo-200);
+    padding: 3px 10px; border-radius: 10px;
+    margin: 8px 4px 0 0;
+  }
+
+  /* ── AI PRODUCTS ── */
+  .ai-section { background: var(--slate-50); }
+  .ai-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+  .ai-card {
+    background: white;
+    border: 1px solid var(--indigo-100);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .ai-card:hover {
+    box-shadow: 0 12px 40px rgba(99,102,241,0.12);
+    transform: translateY(-2px);
+  }
+  .ai-card-top {
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-bottom: 1px solid var(--indigo-50);
+  }
+  .ai-card-badge-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .badge {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 10px;
+  }
+  .badge-co { background: var(--indigo-50); color: var(--indigo-700); border: 1px solid var(--indigo-200); }
+  .badge-early { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+  .badge-hitl { background: var(--blue-50); color: var(--blue-700); border: 1px solid var(--blue-200); }
+  .badge-live { background: #fef9c3; color: #854d0e; border: 1px solid #fde68a; }
+
+  .ai-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 600;
+    color: var(--indigo-900); line-height: 1.25;
+    margin-bottom: 6px;
+  }
+  .ai-card-meta { font-size: 12px; color: var(--slate-400); }
+  .ai-card-body { padding: 1.25rem 1.5rem; }
+  .ai-card-desc { font-size: 13px; color: var(--slate-600); line-height: 1.8; margin-bottom: 1rem; }
+
+  .chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+  .chip {
+    font-size: 11px; padding: 4px 10px; border-radius: 8px;
+    background: var(--indigo-50); color: var(--indigo-700);
+    border: 1px solid var(--indigo-100);
+  }
+
+  .ai-metric-row { display: flex; gap: 10px; }
+  .ai-metric {
+    flex: 1; background: var(--indigo-50);
+    border-radius: 10px; padding: 10px 12px; text-align: center;
+  }
+  .ai-metric-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600; color: var(--indigo-700);
+    display: block; line-height: 1.1;
+  }
+  .ai-metric-label { font-size: 10px; color: var(--slate-500); margin-top: 3px; }
+
+  .pivot-note {
+    margin-top: 1rem; padding: 10px 14px;
+    background: #fef9c3; border-radius: 8px;
+    border-left: 3px solid #eab308;
+    font-size: 12px; color: #713f12; line-height: 1.65;
+  }
+  .hitl-note {
+    margin-top: 1rem; padding: 10px 14px;
+    background: var(--blue-50); border-radius: 8px;
+    border-left: 3px solid var(--blue-400);
+    font-size: 12px; color: var(--blue-700); line-height: 1.65;
+  }
+
+  /* ── WORKSHOPS ── */
+  .workshops { background: white; }
+  .wk-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+  .wk-card {
+    border: 1px solid var(--indigo-100);
+    border-radius: 16px; overflow: hidden;
+    background: white;
+    transition: box-shadow 0.2s;
+  }
+  .wk-card:hover { box-shadow: 0 8px 32px rgba(99,102,241,0.1); }
+  .wk-header {
+    display: grid; grid-template-columns: 1fr auto;
+    align-items: start; gap: 1rem;
+    padding: 1.5rem 1.75rem;
+    background: linear-gradient(120deg, var(--indigo-50) 0%, var(--blue-50) 100%);
+    border-bottom: 1px solid var(--indigo-100);
+  }
+  .wk-type { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--indigo-500); margin-bottom: 6px; }
+  .wk-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600; color: var(--indigo-900);
+    line-height: 1.25; margin-bottom: 6px;
+  }
+  .wk-meta-row { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+  .wk-meta { font-size: 12px; color: var(--slate-500); }
+  .duration-pill {
+    background: var(--indigo-600); color: white;
+    font-size: 12px; font-weight: 500; padding: 6px 16px;
+    border-radius: 20px; white-space: nowrap;
+    align-self: flex-start;
+  }
+  .wk-body { padding: 1.5rem 1.75rem; }
+  .wk-desc { font-size: 14px; color: var(--slate-600); line-height: 1.85; margin-bottom: 1.25rem; }
+  .wk-modules-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate-400); margin-bottom: 10px; }
+  .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+  .mod-chip {
+    background: var(--indigo-50); border: 1px solid var(--indigo-100);
+    border-radius: 8px; padding: 8px 12px;
+    font-size: 12px; color: var(--indigo-800);
+    display: flex; align-items: flex-start; gap: 6px;
+  }
+  .mod-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--indigo-400); margin-top: 5px; flex-shrink: 0; }
+  .wk-footer {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    padding: 1rem 1.75rem;
+    background: var(--slate-50);
+    border-top: 1px solid var(--indigo-50);
+  }
+  .wk-footer-label { font-size: 12px; color: var(--slate-400); }
+  .mat-chip {
+    font-size: 11px; padding: 4px 12px; border-radius: 8px;
+    background: white; border: 1px solid var(--indigo-200);
+    color: var(--indigo-700); cursor: pointer;
+    transition: background 0.15s;
+  }
+  .mat-chip:hover { background: var(--indigo-50); }
+
+  /* ── WRITING / LINKEDIN ── */
+  .writing-section { background: white; }
+  .writing-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; margin-bottom: 2rem;
+  }
+  .writing-card {
+    background: var(--slate-50);
+    border: 1px solid var(--indigo-100);
+    border-radius: 14px; padding: 1.5rem;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    text-decoration: none; gap: 1rem;
+    transition: all 0.2s;
+  }
+  .writing-card:hover {
+    border-color: var(--indigo-300);
+    background: var(--indigo-50);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(99,102,241,0.1);
+  }
+  .writing-card-inner { flex: 1; }
+  .writing-tag {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--indigo-600);
+    background: var(--indigo-100); padding: 3px 10px;
+    border-radius: 10px; display: inline-block; margin-bottom: 10px;
+  }
+  .writing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; font-weight: 600;
+    color: var(--indigo-900) !important; line-height: 1.3; margin-bottom: 8px;
+  }
+  .writing-meta { font-size: 12px; color: var(--slate-500) !important; text-decoration: none; }
+  .writing-li-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: #0077b5; color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; flex-shrink: 0;
+    font-family: 'Outfit', sans-serif;
+  }
+  .writing-cta { text-align: center; }
+  .writing-cta-note {
+    font-size: 12px; color: var(--slate-400);
+    margin-top: 1rem; font-style: italic;
+  }
+
+  /* ── EDUCATION ── */
+  .education-section { background: var(--indigo-50); }
+  .edu-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+  .edu-card {
+    background: white; border: 1px solid var(--indigo-100);
+    border-radius: 16px; padding: 1.75rem;
+    display: flex; gap: 1.25rem; align-items: flex-start;
+    transition: box-shadow 0.2s;
+  }
+  .edu-card:hover { box-shadow: 0 8px 28px rgba(99,102,241,0.1); }
+  .edu-card-featured {
+    border: 2px solid var(--indigo-300);
+    background: linear-gradient(135deg, white 80%, var(--indigo-50) 100%);
+  }
+  .edu-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: var(--indigo-100); display: flex;
+    align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .edu-card-right { flex: 1; }
+  .edu-badge-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+  .edu-badge {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 10px;
+    background: var(--indigo-50); color: var(--indigo-700);
+    border: 1px solid var(--indigo-200);
+  }
+  .edu-badge-featured {
+    background: var(--indigo-600); color: white; border-color: var(--indigo-600);
+  }
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 600;
+    color: var(--indigo-900); line-height: 1.25; margin-bottom: 4px;
+  }
+  .edu-school { font-size: 13px; color: var(--slate-500); margin-bottom: 10px; }
+  .edu-desc { font-size: 13px; color: var(--slate-600); line-height: 1.8; margin-bottom: 1.25rem; }
+  .edu-modules-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--slate-400); margin-bottom: 10px;
+  }
+  .edu-modules-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+  }
+  .edu-module {
+    background: var(--indigo-50); border: 1px solid var(--indigo-100);
+    border-radius: 10px; padding: 12px 14px;
+  }
+  .edu-module-phase {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--indigo-500); margin-bottom: 4px;
+  }
+  .edu-module-title {
+    font-size: 13px; font-weight: 500; color: var(--indigo-900);
+    line-height: 1.3; margin-bottom: 4px;
+  }
+  .edu-module-desc { font-size: 11px; color: var(--slate-500); line-height: 1.6; }
+  .edu-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .edu-card-sm { padding: 1.25rem; }
+
+  /* ── SKILLS ── */
+  .skills-section { background: var(--indigo-900); }
+  .skills-section .section-title { color: var(--indigo-100); }
+  .skills-section .section-label { color: var(--indigo-400); }
+  .skills-section .section-intro { color: var(--indigo-300); }
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .skill-group {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(165,180,252,0.15);
+    border-radius: 14px; padding: 1.5rem;
+  }
+  .skill-group-title {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--indigo-400);
+    margin-bottom: 1rem;
+  }
+  .skill-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-pill {
+    font-size: 12px; padding: 5px 12px; border-radius: 20px;
+    background: rgba(165,180,252,0.1);
+    border: 1px solid rgba(165,180,252,0.2);
+    color: var(--indigo-200);
+  }
+  .skill-pill.hl {
+    background: rgba(99,102,241,0.25);
+    border-color: var(--indigo-400);
+    color: var(--indigo-200);
+  }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: linear-gradient(160deg, var(--blue-50), var(--indigo-50));
+    text-align: center;
+    padding: 7rem 2rem;
+  }
+  .contact-section .section-title { margin-bottom: 0.5rem; }
+  .contact-intro { font-size: 16px; color: var(--slate-500); margin-bottom: 3rem; font-weight: 300; }
+  .contact-cards {
+    display: flex; justify-content: center; gap: 1rem;
+    flex-wrap: wrap; margin-bottom: 3rem;
+  }
+  .contact-card {
+    background: white; border: 1px solid var(--indigo-100);
+    border-radius: 12px; padding: 1.25rem 1.75rem;
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; transition: all 0.2s;
+    min-width: 220px;
+  }
+  .contact-card:hover {
+    border-color: var(--indigo-300);
+    box-shadow: 0 8px 24px rgba(99,102,241,0.12);
+    transform: translateY(-2px);
+  }
+  .contact-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--indigo-50); display: flex;
+    align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .contact-label { font-size: 11px; color: var(--slate-400); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .contact-val { font-size: 14px; font-weight: 500; color: var(--indigo-800); }
+  .relocation-note {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #dcfce7; border: 1px solid #bbf7d0;
+    color: #166534; font-size: 13px;
+    padding: 8px 20px; border-radius: 20px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--indigo-900);
+    padding: 2rem;
+    text-align: center;
+    font-size: 13px; color: var(--indigo-400);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-inner > * { animation: fadeUp 0.7s ease both; }
+  .hero-inner > *:nth-child(2) { animation-delay: 0.15s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .ai-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .tl-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    nav { display: none; }
+  }
+</style>
 </head>
 <body>
-    <nav>
-        <div class="nav-logo">Parvati Ramachandran</div>
-        <ul class="nav-links">
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#ai">AI Products</a></li>
-            <li><a href="#writing">Insights</a></li>
-            <li><a href="#education">Education</a></li>
-        </ul>
-    </nav>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-inner">
-                <div>
-                    <h1 class="section-title" style="font-size: 3.5rem;">Building products that make <em>hard tech</em> feel human.</h1>
-                    <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--slate-600);">Director of Product (AI & Platform) at Adform. 12+ years scaling global SaaS platforms across AdTech, EdTech, and FinTech.</p>
-                    <a href="mailto:parvati.ramachandran89@gmail.com" class="btn-primary">Get in touch</a>
-                </div>
-                <div class="hero-card">
-                    <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 1rem;">Parvati Ramachandran</div>
-                    <p style="font-size: 0.85rem; color: var(--slate-500);">Based in Mumbai, India</p>
-                    <div class="badge-box" style="margin-top: 1.5rem; border-left-color: #22c55e; background: #f0fdf4;">
-                        🌿 Open to New Zealand opportunities
-                    </div>
-                </div>
-            </div>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Parvati Ramachandran</div>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#ai">AI Products</a></li>
+    <li><a href="#workshops">Workshops</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="orb-1 hero-bg-orb"></div>
+  <div class="orb-2 hero-bg-orb"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Product Director · AI Strategy · UX Leadership</div>
+      <h1>Building products that make <em>hard tech</em> feel human.</h1>
+      <p class="hero-subtitle">
+        <strong>12+ years</strong> scaling global B2B & B2C SaaS platforms across AdTech, EdTech, FinTech, and HR Tech. I started as a software engineer and never stopped thinking like one — which means I speak both the language of C-suite strategy and the language of distributed systems.
+      </p>
+      <p class="hero-subtitle">
+        Currently leading AI product strategy at Adform, Mumbai — architecting GenAI agents, scaling distributed teams, and turning complex technology into experiences people actually want to use.
+      </p>
+      <div class="hero-cta">
+        <a href="#ai" class="btn-primary">View AI Work</a>
+        <a href="#contact" class="btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="avatar">PR</div>
+      <div class="hero-card-name">Parvati Ramachandran</div>
+      <div class="hero-card-role">Director of Product (AI & Platform) · Adform</div>
+      <div class="hero-card-divider"></div>
+      <div class="stat-mini-row">
+        <div class="stat-mini"><span class="stat-mini-label">Experience</span><span class="stat-mini-val">12+ years</span></div>
+        <div class="stat-mini"><span class="stat-mini-label">Revenue generated</span><span class="stat-mini-val">$14M USD</span></div>
+        <div class="stat-mini"><span class="stat-mini-label">Industries</span><span class="stat-mini-val">AdTech · EdTech · FinTech · HR</span></div>
+        <div class="stat-mini"><span class="stat-mini-label">Based in</span><span class="stat-mini-val">Mumbai, India</span></div>
+      </div>
+      <div class="open-badge"><span class="open-dot"></span>Open to relocation — New Zealand</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number">12+</span>
+      <div class="stat-desc">Years in product & AI</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">$14M</span>
+      <div class="stat-desc">Revenue generated</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">5</span>
+      <div class="stat-desc">AI products shipped</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">4</span>
+      <div class="stat-desc">Industries scaled</div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Experience</h2>
+    <p class="section-intro">From writing code at Infosys to directing AI strategy at Adform — a journey across industries, geographies, and the full product lifecycle.</p>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Mar 2023 – Present</div>
+          <div class="tl-co">Adform</div>
+          <div class="tl-loc">Mumbai, India</div>
         </div>
-    </section>
-
-    <section id="experience" class="container">
-        <div class="section-label">Career</div>
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-            <div class="tl-item">
-                <div class="tl-date">Mar 2023 – Present</div>
-                <div class="tl-role">Director of Product — AI & Platform @ Adform</div>
-                <p>Leading GenAI strategy and distributed teams across Mumbai, Lithuania, and Warsaw.</p>
-                <div class="badge-box">
-                    <strong>Leadership Development:</strong> Completed Adform’s Leadership Fundamentals (2025) covering Leading with Trust, Situational Leadership, and Strategy Execution.
-                </div>
-            </div>
-            <div class="tl-item">
-                <div class="tl-date">Mar 2019 – Mar 2023</div>
-                <div class="tl-role">Head of Product @ iSchoolConnect</div>
-                <p>Core leadership team. Generated $14M USD revenue by launching AI-based Fraud Detection systems.</p>
-            </div>
+        <div>
+          <div class="tl-role">Director of Product — AI & Platform</div>
+          <div class="tl-desc">Rapidly promoted to lead the AI vertical after establishing the India Product function. Member of the India Leadership Team. Presenting GenAI strategy and investment roadmaps to C-Level executives. Leading a distributed team across Mumbai, Lithuania, and Warsaw. Launched the GenAI Audience Discovery Agent (76% conversion rate) and currently architecting a Campaign Search & Filter Agent using Model Context Protocol — establishing the foundational agent framework for the platform.</div>
+          <span class="tl-tag">GenAI</span><span class="tl-tag">MCP</span><span class="tl-tag">AdTech</span><span class="tl-tag">Global Teams</span>
         </div>
-    </section>
+      </div>
 
-    <section id="writing" style="background: var(--indigo-50);">
-        <div class="container">
-            <div class="section-label">Thought Leadership</div>
-            <h2 class="section-title">LinkedIn Insights</h2>
-            <div class="ai-grid">
-                <a href="https://www.linkedin.com/in/parvati-ramachandran/" target="_blank" class="ai-card">
-                    <h3>Real-Time Bidding & Scalability</h3>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Exploring the infrastructure that powers modern programmatic advertising.</p>
-                </a>
-                <a href="https://www.linkedin.com/in/parvati-ramachandran/" target="_blank" class="ai-card">
-                    <h3>The "Agentic" Roadmap</h3>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">How autonomous AI agents are redefining the B2B SaaS experience.</p>
-                </a>
-            </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Mar 2019 – Mar 2023</div>
+          <div class="tl-co">iSchoolConnect</div>
+          <div class="tl-loc">Mumbai, India</div>
         </div>
-    </section>
+        <div>
+          <div class="tl-role">Head of Product — EdTech</div>
+          <div class="tl-desc">Core leadership team member, reporting directly to the CEO. Defined long-term product vision, investor narrative, and GTM strategy. Managed a multidisciplinary team of UX, Frontend, Backend, and QA engineers. Generated $14M USD in revenue by launching an AI-based Fraud Detection & Proctoring System — built on computer vision models first developed for the Video Interview Analyser years earlier.</div>
+          <span class="tl-tag">Zero-to-One</span><span class="tl-tag">AI Proctoring</span><span class="tl-tag">EdTech</span><span class="tl-tag">Team Management</span>
+        </div>
+      </div>
 
-    <section id="skills" class="container">
-        <div class="section-label">Capabilities</div>
-        <h2 class="section-title">Skills & Tools</h2>
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Aug 2018 – Mar 2019</div>
+          <div class="tl-co">Lucida Technologies</div>
+          <div class="tl-loc">Bangalore, India</div>
+        </div>
+        <div>
+          <div class="tl-role">Business Analyst & Scrum Master</div>
+          <div class="tl-desc">Led a gamification initiative that scaled employee motivation by 60%. Facilitated agile scrum processes and managed product backlog delivery for the development team.</div>
+          <span class="tl-tag">Agile</span><span class="tl-tag">Gamification</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Nov 2015 – Nov 2017</div>
+          <div class="tl-co">Mastek Ltd</div>
+          <div class="tl-loc">Mumbai, India</div>
+        </div>
+        <div>
+          <div class="tl-role">Business Analyst — FinTech</div>
+          <div class="tl-desc">Delivered detailed functional specifications for high-value FinTech systems, bridging client business objectives with technical implementation.</div>
+          <span class="tl-tag">FinTech</span><span class="tl-tag">Requirements</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Oct 2011 – Jul 2013</div>
+          <div class="tl-co">Infosys Ltd</div>
+          <div class="tl-loc">Pune, India</div>
+        </div>
+        <div>
+          <div class="tl-role">Systems Engineer</div>
+          <div class="tl-desc">Started career as a core developer, building foundational technical discipline and SDLC knowledge before transitioning into product management.</div>
+          <span class="tl-tag">Engineering</span><span class="tl-tag">SDLC</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI PRODUCTS -->
+<section class="ai-section" id="ai">
+  <div class="container">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">AI Products I've Built</h2>
+    <p class="section-intro">A track record of shipping AI before it was fashionable — from computer vision tools built 6 years ahead of the market, to GenAI agents running in production today.</p>
+
+    <div class="ai-grid">
+
+      <!-- VIA -->
+      <div class="ai-card">
+        <div class="ai-card-top">
+          <div class="ai-card-badge-row">
+            <span class="badge badge-co">iSchoolConnect · ~2019</span>
+            <span class="badge badge-early">6 years ahead of market</span>
+          </div>
+          <div class="ai-card-title">Video Interview Analyser (VIA)</div>
+          <div class="ai-card-meta">Computer Vision · NLP · Student Visa Prep</div>
+        </div>
+        <div class="ai-card-body">
+          <p class="ai-card-desc">Built years before AI-powered interview tools became mainstream, VIA let students practise visa interviews and receive a detailed, objective analysis report — something previously only possible in a counsellor's office. The system scored students across behavioural and linguistic dimensions and surfaced personalised suggestions for improvement.</p>
+          <div class="chips-row">
+            <span class="chip">Confidence scoring</span>
+            <span class="chip">Eye contact tracking</span>
+            <span class="chip">Filler word detection</span>
+            <span class="chip">Pause analysis</span>
+            <span class="chip">Strengths & weaknesses report</span>
+          </div>
+          <div class="pivot-note">
+            <strong>The pivot that paid off:</strong> The CV and behavioural models built for VIA were repurposed into the AI Proctoring System during Covid — directly contributing to the $14M revenue milestone. Building ahead of the market created an asset that was ready when the moment came.
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Proctoring -->
+      <div class="ai-card">
+        <div class="ai-card-top">
+          <div class="ai-card-badge-row">
+            <span class="badge badge-co">iSchoolConnect · 2021</span>
+          </div>
+          <div class="ai-card-title">AI Fraud Detection & Proctoring System</div>
+          <div class="ai-card-meta">Computer Vision · Behavioural AI · B2B SaaS</div>
+        </div>
+        <div class="ai-card-body">
+          <p class="ai-card-desc">Conceptualized and launched an AI-based proctoring system for high-stakes international student exams during Covid. Championed a B2C-grade user experience within a B2B security product to minimise user stress during already-difficult examination conditions.</p>
+          <div class="chips-row">
+            <span class="chip">Real-time fraud detection</span>
+            <span class="chip">Behavioural analysis</span>
+            <span class="chip">Human-grade UX in a security context</span>
+          </div>
+          <div class="ai-metric-row">
+            <div class="ai-metric">
+              <span class="ai-metric-num">$14M</span>
+              <div class="ai-metric-label">USD revenue generated</div>
+            </div>
+            <div class="ai-metric">
+              <span class="ai-metric-num">CV Models</span>
+              <div class="ai-metric-label">reused from VIA project</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- University Rec -->
+      <div class="ai-card">
+        <div class="ai-card-top">
+          <div class="ai-card-badge-row">
+            <span class="badge badge-co">iSchoolConnect · EdTech AI</span>
+            <span class="badge badge-hitl">Human-in-the-loop</span>
+          </div>
+          <div class="ai-card-title">University & Course Recommendation System</div>
+          <div class="ai-card-meta">ML · Recommendation Engine · Counsellor Tools</div>
+        </div>
+        <div class="ai-card-body">
+          <p class="ai-card-desc">Personalised matching engine that recommended universities and courses based on a student's full profile — demographics, academic background, work experience, and study interests. Showed similar profiles of accepted students for social proof. Counsellors and students shared a single live view, replacing a slow manual Excel process.</p>
+          <div class="chips-row">
+            <span class="chip">Profile-driven matching</span>
+            <span class="chip">Similar-student profiles</span>
+            <span class="chip">Shared counsellor–student view</span>
+            <span class="chip">Excel → automated</span>
+          </div>
+          <div class="hitl-note">
+            <strong>HITL design:</strong> Counsellor overrides weren't just corrections — they were structured as training signal, enabling the model to continuously improve from expert judgment at scale.
+          </div>
+        </div>
+      </div>
+
+      <!-- GenAI Audience Agent -->
+      <div class="ai-card">
+        <div class="ai-card-top">
+          <div class="ai-card-badge-row">
+            <span class="badge badge-co">Adform · 2024</span>
+            <span class="badge badge-live">Live in production</span>
+          </div>
+          <div class="ai-card-title">GenAI Audience Discovery Agent</div>
+          <div class="ai-card-meta">LLM · Conversational AI · AdTech</div>
+        </div>
+        <div class="ai-card-body">
+          <p class="ai-card-desc">Conceptualized and launched a conversational AI agent that recommends audience segments to media planners. Transformed complex backend data targeting logic into a simple, intuitive chat interface — personally mapping all user flows and edge cases to ensure the agent worked for non-technical users.</p>
+          <div class="chips-row">
+            <span class="chip">Conversational UX</span>
+            <span class="chip">Audience segmentation</span>
+            <span class="chip">C-level adoption strategy</span>
+          </div>
+          <div class="ai-metric-row">
+            <div class="ai-metric">
+              <span class="ai-metric-num">76%</span>
+              <div class="ai-metric-label">recommendation conversion</div>
+            </div>
+            <div class="ai-metric">
+              <span class="ai-metric-num">23%</span>
+              <div class="ai-metric-label">plan-save rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MCP Agent -->
+      <div class="ai-card">
+        <div class="ai-card-top">
+          <div class="ai-card-badge-row">
+            <span class="badge badge-co">Adform · 2025</span>
+            <span class="badge badge-live">In progress</span>
+          </div>
+          <div class="ai-card-title">Campaign Search & Filter Agent (MCP)</div>
+          <div class="ai-card-meta">Model Context Protocol · Agentic AI · AdTech Platform</div>
+        </div>
+        <div class="ai-card-body">
+          <p class="ai-card-desc">Currently architecting an MCP-based agent framework that enables natural language search and filtering across campaign data. This initiative establishes the foundational "Agent Framework" for the Adform platform — designed to enable rapid deployment of future autonomous agents without rebuilding the stack each time.</p>
+          <div class="chips-row">
+            <span class="chip">Model Context Protocol</span>
+            <span class="chip">Autonomous agents</span>
+            <span class="chip">Platform architecture</span>
+            <span class="chip">Agent framework design</span>
+          </div>
+          <div class="ai-metric-row">
+            <div class="ai-metric">
+              <span class="ai-metric-num">Foundation</span>
+              <div class="ai-metric-label">for all future agents</div>
+            </div>
+            <div class="ai-metric">
+              <span class="ai-metric-num">MCP</span>
+              <div class="ai-metric-label">cutting-edge protocol</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOPS -->
+<section class="workshops" id="workshops">
+  <div class="container">
+    <div class="section-label">Facilitation</div>
+    <h2 class="section-title">Workshops & Talks</h2>
+    <p class="section-intro">Hands-on sessions I've designed and facilitated for product teams — from creative collaboration exercises to deep-dive leadership workshops.</p>
+
+    <div class="wk-grid">
+
+      <div class="wk-card">
+        <div class="wk-header">
+          <div>
+            <div class="wk-type">Team Building · Facilitation</div>
+            <div class="wk-title">Team Building & Collaboration: The Comic Strip Challenge</div>
+            <div class="wk-meta-row">
+              <span class="wk-meta">👥 Teams of 3–6</span>
+              <span class="wk-meta">🎯 Cross-functional teams</span>
+              <span class="wk-meta">📍 In-person</span>
+            </div>
+          </div>
+          <div class="duration-pill">60 minutes</div>
+        </div>
+        <div class="wk-body">
+          <p class="wk-desc">A high-energy creative workshop designed to break down silos and build real collaborative muscle — fast. Teams co-create a 6-panel comic strip through structured rounds of storytelling, plot twists, and a mid-session panel swap that forces them to build on each other's ideas without losing momentum. It's deceptively playful: under the laughter, participants are practising exactly what makes great product teams tick — adaptability, rapid decision-making, and trusting the people beside them.</p>
+          <div class="wk-modules-label">What's covered</div>
+          <div class="modules-grid">
+            <div class="mod-chip"><div class="mod-dot"></div>Rapid creative collaboration under time pressure</div>
+            <div class="mod-chip"><div class="mod-dot"></div>Adapting to others' ideas mid-flow</div>
+            <div class="mod-chip"><div class="mod-dot"></div>Non-verbal communication (visual-only panel)</div>
+            <div class="mod-chip"><div class="mod-dot"></div>Reflection & team storytelling</div>
+          </div>
+        </div>
+        <div class="wk-footer">
+          <span class="wk-footer-label">Materials:</span>
+          <span class="mat-chip">📄 Facilitation guide</span>
+          <span class="mat-chip">🎲 Story prompt cards</span>
+          <span class="mat-chip">🖼 Panel templates</span>
+        </div>
+      </div>
+
+      <div class="wk-card">
+        <div class="wk-header">
+          <div>
+            <div class="wk-type">Product Leadership · Communication</div>
+            <div class="wk-title">Stakeholder Management & Communication for Product Managers</div>
+            <div class="wk-meta-row">
+              <span class="wk-meta">👥 5 Product Managers</span>
+              <span class="wk-meta">🎯 Mid-to-senior PMs</span>
+              <span class="wk-meta">📍 In-person · Interactive</span>
+            </div>
+          </div>
+          <div class="duration-pill">4 hours</div>
+        </div>
+        <div class="wk-body">
+          <p class="wk-desc">A deep-dive workshop for product managers who know their craft but want to level up how they work with the humans around them. Built around real-world scenarios and role-play, this session moves through the full arc of stakeholder influence — from understanding what drives different personalities using the DISC framework, to mapping power dynamics, asking better questions, and navigating the conversations no one wants to have. Participants leave with a personalised stakeholder map they can put to work the very next day.</p>
+          <div class="wk-modules-label">Workshop modules</div>
+          <div class="modules-grid">
+            <div class="mod-chip"><div class="mod-dot"></div>DISC personality styles & tailored communication</div>
+            <div class="mod-chip"><div class="mod-dot"></div>Empathy mapping by stakeholder role</div>
+            <div class="mod-chip"><div class="mod-dot"></div>Stakeholder engagement matrix (power vs interest)</div>
+            <div class="mod-chip"><div class="mod-dot"></div>Strategic questioning techniques</div>
+            <div class="mod-chip"><div class="mod-dot"></div>Navigating difficult conversations</div>
+            <div class="mod-chip"><div class="mod-dot"></div>Personal stakeholder mapping exercise</div>
+          </div>
+        </div>
+        <div class="wk-footer">
+          <span class="wk-footer-label">Materials:</span>
+          <span class="mat-chip">📄 Workshop guide</span>
+          <span class="mat-chip">🗺 Stakeholder map template</span>
+          <span class="mat-chip">🎭 Scenario cards</span>
+          <span class="mat-chip">🧠 DISC reference sheet</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LINKEDIN WRITING -->
+<section class="writing-section" id="writing">
+  <div class="container">
+    <div class="section-label">Thought Leadership</div>
+    <h2 class="section-title">Writing & LinkedIn Posts</h2>
+    <p class="section-intro">Sharing what I learn in public — on AI product strategy, leadership, and building teams across cultures and time zones.</p>
+    <div class="writing-grid">
+      <a href="https://www.linkedin.com/posts/parvati-ramachandran_productmanagement-datascience-adtech-share-7422644531650592770-58J0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA8_br8BbzAl3_B-KBVmbDvgubJAWrdylrs" target="_blank" class="writing-card">
+        <div class="writing-card-inner">
+          <div class="writing-tag">AdTech · Product</div>
+          <div class="writing-title">The most complex financial exchange in the world is hidden inside your browser. Welcome to AdTech.</div>
+          <div class="writing-meta">Demystifying programmatic advertising for product & data science professionals →</div>
+        </div>
+        <div class="writing-li-icon">in</div>
+      </a>
+      <a href="https://www.linkedin.com/posts/parvati-ramachandran_lifeatadform-activity-7208806706963746817-iJk6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA8_br8BbzAl3_B-KBVmbDvgubJAWrdylrs" target="_blank" class="writing-card">
+        <div class="writing-card-inner">
+          <div class="writing-tag">Life at Adform</div>
+          <div class="writing-title">Leadership Fundamentals Training — what it meant to invest 6 months in becoming a better leader</div>
+          <div class="writing-meta">Reflections on the Adform leadership development programme →</div>
+        </div>
+        <div class="writing-li-icon">in</div>
+      </a>
+      <a href="https://www.linkedin.com/posts/parvati-ramachandran_adform-productmanagement-leadershiplessons-activity-7159119028463058944-gWtq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA8_br8BbzAl3_B-KBVmbDvgubJAWrdylrs" target="_blank" class="writing-card">
+        <div class="writing-card-inner">
+          <div class="writing-tag">Leadership</div>
+          <div class="writing-title">Pawsitively Clear: Boundaries &amp; Trust Lessons from My Cat</div>
+          <div class="writing-meta">What a cat quietly teaches us about psychological safety and trust at work →</div>
+        </div>
+        <div class="writing-li-icon">in</div>
+      </a>
+      <a href="https://www.linkedin.com/posts/parvati-ramachandran_adform-leadershiplessons-activity-7145748630384160769-f-Ks?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA8_br8BbzAl3_B-KBVmbDvgubJAWrdylrs" target="_blank" class="writing-card">
+        <div class="writing-card-inner">
+          <div class="writing-tag">Leadership</div>
+          <div class="writing-title">From Whisk to Wisdom: 5 Leadership Lessons I Learned in the Kitchen</div>
+          <div class="writing-meta">What mise en place, patience, and a good recipe taught me about leading product teams →</div>
+        </div>
+        <div class="writing-li-icon">in</div>
+      </a>
+    </div>
+    <div class="writing-cta">
+      <a href="https://www.linkedin.com/in/parvati-ramachandran/" target="_blank" class="btn-primary">View all posts on LinkedIn →</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education-section" id="education">
+  <div class="container">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Education &amp; Training</h2>
+    <p class="section-intro">A foundation in engineering and finance, built on with machine learning, and continuously sharpened through leadership programmes.</p>
+    <div class="edu-grid">
+      <div class="edu-card edu-card-featured">
+        <div class="edu-card-left"><div class="edu-icon">🏛</div></div>
+        <div class="edu-card-right">
+          <div class="edu-badge-row">
+            <span class="edu-badge edu-badge-featured">Leadership Programme</span>
+            <span class="edu-badge">Jan – Jun 2026</span>
+          </div>
+          <div class="edu-degree">Leadership Fundamentals Programme</div>
+          <div class="edu-school">Adform · Vilnius (in-person) &amp; Online</div>
+          <p class="edu-desc">A 6-month structured leadership development journey combining in-person workshops in Vilnius with online follow-ups, self-learning assignments, and senior leader experience sharing sessions. Approx. 4–24 hours in workshops monthly, plus ~4 hours of self-directed learning and reflection.</p>
+          <div class="edu-modules-label">Modules completed</div>
+          <div class="edu-modules-grid">
+            <div class="edu-module">
+              <div class="edu-module-phase">Jan – Feb</div>
+              <div class="edu-module-title">Preparations</div>
+              <div class="edu-module-desc">Personality + logical assessment, 360 Diagnostic — identifying strengths and development areas</div>
+            </div>
+            <div class="edu-module">
+              <div class="edu-module-phase">Mar 5–7, Vilnius</div>
+              <div class="edu-module-title">Leading with Trust. Multiplying Intelligence of Others</div>
+              <div class="edu-module-desc">How to lead with trust, unleash potential, and boost team productivity</div>
+            </div>
+            <div class="edu-module">
+              <div class="edu-module-phase">Apr 23–25, Vilnius</div>
+              <div class="edu-module-title">Building High Performing Teams. Situational Leadership &amp; Coaching</div>
+              <div class="edu-module-desc">Adjusting leadership style to team maturity and individual members</div>
+            </div>
+            <div class="edu-module">
+              <div class="edu-module-phase">Jun 11–13, Vilnius</div>
+              <div class="edu-module-title">Strategy Execution. Graduation</div>
+              <div class="edu-module-desc">Foundations of strategy execution, assignment presentations, and wrap-up of the full journey</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="edu-row">
+        <div class="edu-card edu-card-sm">
+          <div class="edu-card-left"><div class="edu-icon">🎓</div></div>
+          <div class="edu-card-right">
+            <div class="edu-badge-row"><span class="edu-badge">2019</span></div>
+            <div class="edu-degree">Post Graduate Diploma in Machine Learning</div>
+            <div class="edu-school">Great Lakes Institute of Management</div>
+          </div>
+        </div>
+        <div class="edu-card edu-card-sm">
+          <div class="edu-card-left"><div class="edu-icon">📊</div></div>
+          <div class="edu-card-right">
+            <div class="edu-badge-row"><span class="edu-badge">2015</span></div>
+            <div class="edu-degree">MBA — Finance</div>
+            <div class="edu-school">N. L. Dalmia Institute of Management Studies, Mumbai</div>
+          </div>
+        </div>
+        <div class="edu-card edu-card-sm">
+          <div class="edu-card-left"><div class="edu-icon">💻</div></div>
+          <div class="edu-card-right">
+            <div class="edu-badge-row"><span class="edu-badge">2011</span></div>
+            <div class="edu-degree">Bachelor of Engineering — Computer Science</div>
+            <div class="edu-school">Datta Meghe College of Engineering, Mumbai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+  <div class="container">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Skills & Tools</h2>
+    <p class="section-intro">Spanning product strategy, AI engineering vocabulary, analytics, and the full suite of tools that make distributed teams work.</p>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Leadership</div>
         <div class="skill-pills">
-            <span class="skill-pill hl">Agile Leadership</span>
-            <span class="skill-pill hl">GenAI Strategy</span>
-            <span class="skill-pill hl">Model Context Protocol (MCP)</span>
-            <span class="skill-pill">C-Level Communication</span>
-            <span class="skill-pill">Distributed Team Management</span>
-            <span class="skill-pill">Zero-to-One Scaling</span>
+          <span class="skill-pill hl">C-Level Communication</span>
+          <span class="skill-pill hl">Zero-to-One Scaling</span>
+          <span class="skill-pill hl">Cross-Functional Leadership</span>
+          <span class="skill-pill hl">Agile Leadership</span>
+          <span class="skill-pill">Distributed Team Management</span>
+          <span class="skill-pill">Stakeholder Alignment</span>
+          <span class="skill-pill">Performance Management</span>
         </div>
-    </section>
-
-    <section id="education" style="background: white;">
-        <div class="container">
-            <div class="section-label">Academic</div>
-            <h2 class="section-title">Education</h2>
-            <div class="tl-role">Bachelor of Engineering</div>
-            <p style="color: var(--slate-600);">Systems Engineering foundation at Infosys Ltd.</p>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">AI & Technical</div>
+        <div class="skill-pills">
+          <span class="skill-pill hl">Generative AI Strategy</span>
+          <span class="skill-pill hl">LLMs & RAG</span>
+          <span class="skill-pill hl">Model Context Protocol</span>
+          <span class="skill-pill">Computer Vision</span>
+          <span class="skill-pill">API Design (REST)</span>
+          <span class="skill-pill">SDLC</span>
         </div>
-    </section>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Product Strategy</div>
+        <div class="skill-pills">
+          <span class="skill-pill hl">Complex Workflow Design</span>
+          <span class="skill-pill hl">UX Strategy</span>
+          <span class="skill-pill">Edge Case Analysis</span>
+          <span class="skill-pill">Multi-Industry Adaptability</span>
+          <span class="skill-pill">Go-to-Market</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Prototyping</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">Balsamiq</span>
+          <span class="skill-pill">Whimsical</span>
+          <span class="skill-pill">Excalidraw</span>
+          <span class="skill-pill">Draw.io</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Analytics</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Amplitude</span>
+          <span class="skill-pill">GA4</span>
+          <span class="skill-pill">Tableau</span>
+          <span class="skill-pill">Looker</span>
+          <span class="skill-pill">LogRocket</span>
+          <span class="skill-pill">Redash</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">PM & Collaboration</div>
+        <div class="skill-pills">
+          <span class="skill-pill">Jira Advanced Roadmaps</span>
+          <span class="skill-pill">Confluence</span>
+          <span class="skill-pill">Asana</span>
+          <span class="skill-pill">Slack</span>
+          <span class="skill-pill">HubSpot</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>© 2026 Parvati Ramachandran · Mumbai, India</p>
-    </footer>
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-label">Get in touch</div>
+    <h2 class="section-title">Let's build something together</h2>
+    <p class="contact-intro">Open to product leadership roles, AI advisory, and speaking engagements. Actively exploring opportunities in New Zealand.</p>
+    <div class="contact-cards">
+      <a href="mailto:parvati.ramachandran89@gmail.com" class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val">parvati.ramachandran89@gmail.com</div>
+        </div>
+      </a>
+      <a href="tel:+917977692701" class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-val">+91 797 769 2701</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/parvati-ramachandran/" target="_blank" class="contact-card">
+        <div class="contact-icon">💼</div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-val">parvati-ramachandran</div>
+        </div>
+      </a>
+    </div>
+    <div class="relocation-note">🌿 Open to relocation to New Zealand · Visa sponsorship required</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Parvati Ramachandran · Product Director & AI Strategist · Mumbai, India</p>
+</footer>
+
 </body>
 </html>

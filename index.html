@@ -771,7 +771,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
     <p style="font-size:15px;color:var(--text-3);margin-bottom:0;font-weight:300;text-align:center;" class="reveal">Open to product leadership roles, AI advisory, and speaking engagements.</p>
     <div class="ccards stagger">
       <a href="https://mountainlady.github.io/parvati.ramachandran/" target="_blank" class="ccard"><div class="cicon">&#127760;</div><div><div class="clbl">Portfolio</div><div class="cval">mountainlady.github.io/github.io</div></div></a>
-      <a href="https://tally.so/r/eqEOEE" class="ccard"><div class="cicon">&#9993;&#65039;</div><div><div class="clbl">Email</div><div class="cval">Send me a message ↗</div></div></a>
+      <button data-tally-open="eqEOEE" data-tally-width="420" data-tally-emoji-text="✉️" data-tally-emoji-animation="wave" class="ccard" style="border:none;cursor:pointer;background:var(--surface);text-align:left;font-family:'Nunito',sans-serif;"><div class="cicon">&#9993;&#65039;</div><div><div class="clbl">Email</div><div class="cval">Send me a message ↗</div></div></button>
       <a href="tel:+917977692701" class="ccard"><div class="cicon">&#128222;</div><div><div class="clbl">Phone</div><div class="cval">+91 797 769 2701</div></div></a>
       <a href="https://www.linkedin.com/in/parvati-ramachandran/" target="_blank" class="ccard"><div class="cicon">&#128188;</div><div><div class="clbl">LinkedIn</div><div class="cval">parvati-ramachandran</div></div></a>
     </div>
@@ -1101,6 +1101,22 @@ function catReact(r) {
 <script async src="https://tally.so/widgets/embed.js"></script>
 
 <script>
-// Silent background submit to Tally Form 1
+// Show cat thank you when Tally form is submitted
+window.addEventListener('message', function(e) {
+  if(e.data && e.data.isTally && e.data.event === 'Tally.FormSubmitted') {
+    const speech = document.getElementById('cat-speech');
+    if(speech) {
+      speech.innerHTML = `
+        <div style="font-size:22px;text-align:center;margin-bottom:6px;">🐱✨</div>
+        <div style="font-size:13px;font-weight:700;color:var(--accent);font-family:'Nunito',sans-serif;text-align:center;line-height:1.5;">
+          Thanks for reaching out!<br>
+          <span style="font-weight:400;font-size:12px;color:var(--text-2);">I'll get back to you soon.</span>
+        </div>`;
+      speech.classList.add('show');
+    }
+  }
+});
+
+
 function submitToTallyForm1(reaction) {
   fetch('https://

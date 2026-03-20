@@ -158,15 +158,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);border
 .art-sec .sec-lbl{color:#a5b4fc;}
 .art-sec .sec-h2{color:#fff;}
 .art-sec .sec-intro{color:rgba(165,180,252,.6);}
-/* ── ART GALLERY GRID — polaroid stack effect ── */
+/* ── ART GALLERY — true masonry via CSS columns ── */
 .masonry {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  columns: 3;
+  column-gap: 1.5rem;
 }
 .mi {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
   position: relative;
   cursor: pointer;
+  display: inline-block;
+  width: 100%;
   transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
 }
 /* Each card has a slight random rotation baked in via nth-child */
@@ -233,7 +236,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
 .stagger.visible>*:nth-child(5){transition-delay:.33s;opacity:1;transform:none;}
 .stagger.visible>*:nth-child(6){transition-delay:.40s;opacity:1;transform:none;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
-@media(max-width:768px){.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}.pgrid{grid-template-columns:1fr;}.sgrid{grid-template-columns:1fr;}.erow{grid-template-columns:1fr;}.masonry{grid-template-columns:repeat(2,1fr);}.wrgrid{grid-template-columns:1fr;}.hero-stats{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}.pgrid{grid-template-columns:1fr;}.sgrid{grid-template-columns:1fr;}.erow{grid-template-columns:1fr;}.masonry{columns:2;column-gap:1rem;}.wrgrid{grid-template-columns:1fr;}.hero-stats{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:900px){.nav-links{display:none;}}
 
 
@@ -1062,7 +1065,7 @@ if(contactSec && slidingCat) {
       if(e.isIntersecting) runCatAnimation();
       else resetCat();
     });
-  }, {threshold: 0.1});
+  }, {threshold: 0.4});
   catObs.observe(contactSec);
 }
 

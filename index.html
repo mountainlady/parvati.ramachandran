@@ -158,10 +158,65 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);border
 .art-sec .sec-lbl{color:#a5b4fc;}
 .art-sec .sec-h2{color:#fff;}
 .art-sec .sec-intro{color:rgba(165,180,252,.6);}
-.masonry{columns:3;gap:1rem;}
-.mi{break-inside:avoid;margin-bottom:1rem;border-radius:var(--r-md);overflow:hidden;}
-.mi img{width:100%;display:block;transition:transform .4s ease;}
-.mi:hover img{transform:scale(1.04);}
+/* ── ART GALLERY — true masonry via CSS columns ── */
+.masonry {
+  columns: 3;
+  column-gap: 1.5rem;
+}
+.mi {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+/* Slight random rotation per card */
+.mi:nth-child(1)  { transform: rotate(-2deg); }
+.mi:nth-child(2)  { transform: rotate(1.5deg); }
+.mi:nth-child(3)  { transform: rotate(-1deg); }
+.mi:nth-child(4)  { transform: rotate(2.5deg); }
+.mi:nth-child(5)  { transform: rotate(-1.8deg); }
+.mi:nth-child(6)  { transform: rotate(1.2deg); }
+.mi:nth-child(7)  { transform: rotate(-2.2deg); }
+.mi:nth-child(8)  { transform: rotate(1.8deg); }
+.mi:nth-child(9)  { transform: rotate(-1.5deg); }
+.mi:nth-child(10) { transform: rotate(2deg); }
+/* Stacked shadow cards behind (polaroid stack feel) */
+.mi::before, .mi::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  z-index: -1;
+}
+.mi::before {
+  transform: rotate(3deg) translate(4px, 4px);
+  background: rgba(255,255,255,0.1);
+}
+.mi::after {
+  transform: rotate(-2.5deg) translate(-3px, 5px);
+  background: rgba(255,255,255,0.07);
+}
+/* Polaroid white border */
+.mi img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.35), 0 2px 6px rgba(0,0,0,0.2);
+  padding: 8px 8px 28px 8px;
+  background: white;
+  transition: box-shadow 0.35s ease;
+}
+.mi:hover {
+  transform: rotate(0deg) scale(1.05) translateY(-6px) !important;
+  z-index: 10;
+}
+.mi:hover img {
+  box-shadow: 0 20px 56px rgba(0,0,0,0.5);
+}
 .csec{padding:6rem 2rem;background:var(--bg);text-align:center;}
 .ccards{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin:2rem 0;}
 .ccard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:1rem 1.5rem;display:flex;align-items:center;gap:12px;text-decoration:none;transition:all .2s;min-width:200px;}
@@ -715,7 +770,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
     <p style="font-size:15px;color:var(--text-3);margin-bottom:0;font-weight:300;text-align:center;" class="reveal">Open to product leadership roles, AI advisory, and speaking engagements.</p>
     <div class="ccards stagger">
       <a href="https://mountainlady.github.io/github.io/" target="_blank" class="ccard"><div class="cicon">&#127760;</div><div><div class="clbl">Portfolio</div><div class="cval">mountainlady.github.io/github.io</div></div></a>
-      <a href="mailto:parvati.ramachandran89@gmail.com" class="ccard"><div class="cicon">&#9993;&#65039;</div><div><div class="clbl">Email</div><div class="cval">parvati.ramachandran89@gmail.com</div></div></a>
+      <a href="/cdn-cgi/l/email-protection#3f4f5e4d495e4b56114d5e525e5c575e515b4d5e5107067f58525e5653115c5052" class="ccard"><div class="cicon">&#9993;&#65039;</div><div><div class="clbl">Email</div><div class="cval"><span class="__cf_email__" data-cfemail="cebeafbcb8afbaa7e0bcafa3afada6afa0aabcafa0f6f78ea9a3afa7a2e0ada1a3">[email&#160;protected]</span></div></div></a>
       <a href="tel:+917977692701" class="ccard"><div class="cicon">&#128222;</div><div><div class="clbl">Phone</div><div class="cval">+91 797 769 2701</div></div></a>
       <a href="https://www.linkedin.com/in/parvati-ramachandran/" target="_blank" class="ccard"><div class="cicon">&#128188;</div><div><div class="clbl">LinkedIn</div><div class="cval">parvati-ramachandran</div></div></a>
     </div>
@@ -725,7 +780,7 @@ footer{background:var(--bg-subtle);border-top:1px solid var(--border);padding:1.
 
 <footer><p>&copy; 2026 Parvati Ramachandran &middot; Product Director &amp; AI Strategist &middot; Mumbai, India &nbsp;&middot;&nbsp; Built with <a href="https://claude.ai" target="_blank" style="color:var(--accent-2);text-decoration:none;font-weight:500;">Claude</a> &#10024;</p></footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const FIXED_MONTHS=117;
 const adS=new Date(2023,2,1),nw=new Date();
 const adM=(nw.getFullYear()-adS.getFullYear())*12+(nw.getMonth()-adS.getMonth());
@@ -1055,14 +1110,4 @@ function catReact(r) {
 <script>
 // Silent background submit to Tally Form 1
 function submitToTallyForm1(reaction) {
-  fetch('https://tally.so/r/aQGJGE', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: 'reaction=' + encodeURIComponent(reaction)
-  }).catch(() => {});
-}
-let userReacted = localStorage.getItem('pr-reacted');
-</script>
-
-</body>
-</html>
+  fetch('https://

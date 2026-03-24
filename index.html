@@ -1090,7 +1090,15 @@ function catReact(r) {
     }
   } else {
     catThanks.style.display = 'block';
-    submitToTallyForm1('Loved it 👍');
+    // Open Tally with reaction pre-filled as a hidden field so it records properly
+    if(window.Tally) {
+      window.Tally.openPopup('eqEOEE', {
+        width: 420,
+        autoClose: 2000,
+        hiddenFields: { reaction: 'Loved it 👍' },
+        onSubmit: () => {}
+      });
+    }
   }
   localStorage.setItem('pr-reacted', r);
 }
